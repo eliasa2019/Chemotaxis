@@ -1,22 +1,21 @@
-int width = 500;
+int width = 800;
 int colonySize = 100;
 Bacteria[] bacteria = new Bacteria[colonySize];
 int bacterium = 0;
-float size;
+float size = 20;
 boolean randomWalk = true;
 float glide = 0.01;
-/*
+
 void settings() {
   size(width, width);
 }
-*/
+
 void setup()   
 {  
-  size(500, 500);
   background(100);
-  frameRate(60);
+  frameRate(30);
   noStroke();
-  for (int i = 0; i < colonySize; i++) bacteria[i] = new Bacteria(width / 2, width / 2, 5);
+  for (int i = 0; i < colonySize; i++) bacteria[i] = new Bacteria(width / 2, width / 2, size);
 }   
 void draw()   
 {
@@ -45,7 +44,7 @@ class Bacteria
     this.size = 10;
     for (int i = 0; i < this.colour.length; i++) this.colour[i] = (int)(Math.random()*128)+128;
   }
-  Bacteria(int x, int y, int size) {
+  Bacteria(int x, int y, float size) {
     this.x = x;
     this.y = y;
     this.size = size;
