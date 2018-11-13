@@ -36,7 +36,7 @@ class Bacteria
     this.x = 0;
     this.y = 0;
     this.size = 10;
-    for (int i = 0; i < this.colour.length; i++) colour[i] = (int)(Math.random()*128)+128;
+    for (int i = 0; i < this.colour.length; i++) this.colour[i] = (int)(Math.random()*128)+128;
   }
   Bacteria(int x, int y) {
     this.x = x;
