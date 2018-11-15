@@ -59,9 +59,9 @@ class Bacteria
   void move() {
     if (randomWalk) {   // If doing gridded walk...
       if (Math.random()>=.5) {    //  50% chance that the bacterium will move left or right
-        this.x += Math.random()>=.5 ? size : -size;   // 25% chance that the bacterium will move either left or right
+        this.x += Math.random()>=.5 ? size : -size;   // 25% chance that the bacterium will move left, 25% chance to move right
       } else {    // 50% chance that the bacterium will move up or down
-        this.y += Math.random()>=.5 ? size : -size;   // 25% chance that the bacterium will move either up or down
+        this.y += Math.random()>=.5 ? size : -size;   // 25% chance that the bacterium will move up, 25% chance to move down
       }
     } else {    // If doing attracted-to-mouse walk...
       this.x += (mouseX - x)*glide;   // Add the difference between the mouse's x and the bacterium's x to the bacterium's x
